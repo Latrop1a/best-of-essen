@@ -18,9 +18,26 @@
     
         <!-- Navbar -->    
         <!-- Home - Alle Gerichte - Erklärung - Stats -->
+        <div class="container mx-auto bg-gray-200 p-2 shadow mb-16">
+            <nav class="flex flex-row md:justify-between">
+
+                <div class="flex flex-row justify-between md:w-auto w-full">
+                    <a href="#">Logo</a>
+
+                    <p id="btn-hamburger" class="md:hidden bg-purple-800">menu</p>
+                </div>
+
+                <ul id="mobileMenu" class="hidden md:flex md:flex-row">
+                    <li class="pr-5"><a>Home</a></li>
+                    <li class="pr-5"><a>Alle Gerichte</a></li>
+                    <li class="pr-5"><a>Rangliste</a></li>
+                    <li class="pr-5"><a>Erklärung</a></li>
+                </ul>
+            </nav>
+         </div>
 
         <!-- header -->
-        <div class="bg-yellow-600 p-10 my-4 mx-10 rounded-full">
+        <div class="bg-yellow-600 p-10 my-4 mx-20 rounded-full font-mono">
 
             <h1 class="text-white text-5xl font-bold text-center mb-2">Best of Essen</h1>
 
@@ -31,7 +48,7 @@
         </div>
         
         <!-- Fight Sektion -->
-        <div class="bg-red-200 p-4 m-4 mt-20 h-full rounded border-8 border-gray-700">
+        <div class="bg-red-200 p-4 m-4 mt-10 h-full rounded border-8 border-gray-700">
             
             <!-- Fight Schrift mit animation -->
             <h3 class="text-red-800 text-center font-semibold text-2xl pt-6">
@@ -39,7 +56,7 @@
             
             <!-- Gerichte boxen mit vs zeichen
             remove opacity after start button -->
-            <div class="mt-16 flex space-x-4 items-center">
+            <div class="mt-16 flex md:flex-row flex-col space-x-4 items-center">
 
                 <!-- Box1 -->
                 <div id="gericht1" class="bg-white border-2 border-black shadow-lg ml-6">
@@ -49,8 +66,8 @@
 
                     <!-- Details1 -->
                     <div class="pt-2">
-                        <h1 class="font-bold">Marrokanische Rinderleber</h1>
-                        <span>Rinderleber, Paprika, Hirse</span>
+                        <h1 class="font-bold">Marrokanische Leber</h1>
+                        <span class="italic">Rinderleber, Paprika, Hirse</span>
                         
                     </div>
                 </div>
@@ -64,8 +81,8 @@
                     <img src="./images/placeholder2.jpg" alt="" class="object-fill h-72 w-96">
                     <!-- Details2 -->
                     <div class="pt-2">
-                        <h1 class="font-bold">Marrokanische Rinderleber</h1>
-                        <span>Rinderleber, Paprika, Hirse</span>
+                        <h1 class="font-bold">Marrokanische Leber</h1>
+                        <span class="italic">Rinderleber, Paprika, Hirse</span>
                         
                     </div>
                 </div>
@@ -74,12 +91,14 @@
 
             <!-- Start Button -->
             <div class="text-center mt-20 mb-10">
-                <button class="transform text-white font-bold bg-gray-500 hover:bg-gray-700 py-2 px-4 rounded hover:translate-x-1 hover:scale-110">
+                <button class="transform text-white font-bold bg-gray-500 hover:bg-gray-700 py-2 px-4 rounded hover:translate-y-0 hover:scale-101">
                     Start</button>    
 
             </div>
+
             
         </div>
 
+        
 </body>
 </html>
