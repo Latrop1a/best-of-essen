@@ -7,3 +7,12 @@ Webpack to bundle
 tailwindcss to custom style css right in the html
 mongoDB for the meals and ranking
 node.js for server
+
+
+Todo:
+vergrößern beim hovern...nur bild?
+vll kommentar funktion zu den contestants sodass man am ende alle kommentare ansehen kann
+wie viele zweikämpfe gewonnen
+gegen wen gewonnen bzw verloren...tags (nudeln, reis, rind, huhn)
+
+Alle Gerichte Übsersicht nur Bilder vs kleine Bilder und mehr text beim ranking
