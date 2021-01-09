@@ -3,16 +3,18 @@
     "id": 0,
     "mealName": "Leber",
     "image": "000.jpg",
-    "tags": ["Rind", "Hirse"],
+    "ingredients": ["Rind", "Hirse", "Paprika"],
+    "tags": ["Innereien", "Fleisch"],
     "rank": 5,
     "battles": 4,
-    "winrate": 33
+    "winrate": 75
   },
   {
     "id": 1,
     "mealName": "Lachs-Nudeln",
     "image": "001.jpg",
-    "tags": ["Fisch", "Nudeln", "Gemüse"],
+    "ingredients": ["Lachs", "Nudeln", "Chinakohl", "Pilze", "Möhren", "Kokosmilch"],
+    "tags": ["Nudelgericht", "Fisch"],
     "rank": 14,
     "battles": 3,
     "winrate": 33
