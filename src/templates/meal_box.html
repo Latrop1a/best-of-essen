@@ -1,43 +1,51 @@
 <head>
-
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link
+    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
 </head>
 
 <body>
-  
+  <figure class="flex-row flex shadow-md rounded-md bg-green-500 h-36">
+    <!-- IMAGE -->
+    <img
+      class="w-80 h-full min-w-max object-cover rounded-2xl py-1 pl-1"
+      alt="Meal Picture"
+      src="./pictures/meals/{%MEAL-ID%}.jpg"
+    />
 
-    <figure class="flex-row flex shadow-md rounded-md bg-green-500 h-36">
-      <!-- IMAGE -->
-      <img class='w-80 h-full min-w-max object-cover rounded-2xl py-1 pl-1' alt='Meal Picture'
-        src='./pictures/meals/{%MEAL-ID%}.jpg'>
-
-
-      <!-- Textbox -->
-      <div class="flex flex-col mt-3 ml-2 justify-center">
-
-        <!-- Title -->
-        <div>
-          <h2 class="text-xl font-mono font-semibold">{%MEALNAME%}</h2>
-        </div>
-
-        <!-- RANKING -->
-        <div class="font-bold mt-1">
-          <h2>Position: {%RANKING%}</h2>
-        </div>
-
-        <!-- TAGS only on desktop-->
-          
-          <div class='flex flex-wrap mt-1 pt-1 -ml-1 font-semibold text-xs hidden sm:block'>
-            {%TAGS%}
-            <a href="/tags?={%TAG%}"
-              class="m-1 bg-green-200 hover:bg-green-600 rounded-full px-2 leading-loose  cursor-pointer scale-90 transform">{%TAGS%}</a>
-            <a
-              class="m-1 bg-green-200 hover:bg-green-600 rounded-full px-2 leading-loose cursor-pointer scale-90 transform">#stark</a>
-            <a
-              class="m-1 bg-green-200 hover:bg-green-600 rounded-full px-2 leading-loose cursor-pointer scale-90 transform">#gameo</a>
-          </div>
-
+    <!-- Textbox -->
+    <div class="flex flex-col mt-3 ml-2 justify-center">
+      <!-- Title -->
+      <div>
+        <h2 class="text-xl font-mono font-semibold">{%MEALNAME%}</h2>
       </div>
 
-    </figure>
+      <!-- RANKING -->
+      <div class="font-bold mt-1">
+        <h2>Position: {%RANKING%}</h2>
+      </div>
+
+      <!-- TAGS only on desktop-->
+
+      <div
+        class="flex flex-wrap mt-1 pt-1 -ml-1 font-semibold text-xs hidden sm:block"
+      >
+        {%TAGS%}
+        <a
+          href="/tags?={%TAG%}"
+          class="m-1 bg-green-200 hover:bg-green-600 rounded-full px-2 leading-loose cursor-pointer scale-90 transform"
+          >{%TAGS%}</a
+        >
+        <a
+          class="m-1 bg-green-200 hover:bg-green-600 rounded-full px-2 leading-loose cursor-pointer scale-90 transform"
+          >#stark</a
+        >
+        <a
+          class="m-1 bg-green-200 hover:bg-green-600 rounded-full px-2 leading-loose cursor-pointer scale-90 transform"
+          >#gameo</a
+        >
+      </div>
+    </div>
+  </figure>
 </body>

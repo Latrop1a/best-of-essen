@@ -1,18 +1,29 @@
 Best of Essen
 
-A site I wanted to code in order for me and my gf to compare our meals.
-By 1vs1 two meal pictures with description I want to code server side logic to gain a ranking list of the meals.
+Dynamic server-side rendered page about determining our best corona meals.
+Ranking list, stats page, meal page etc
 
 Webpack to bundle
 tailwindcss to custom style css right in the html
-mongoDB for the meals and ranking
+mongoDB for data
 node.js for server
 
-
 Todo:
-vergrößern beim hovern...nur bild?
-vll kommentar funktion zu den contestants sodass man am ende alle kommentare ansehen kann
-wie viele zweikämpfe gewonnen
-gegen wen gewonnen bzw verloren...tags (nudeln, reis, rind, huhn)
+::fight page
 
-Alle Gerichte Übsersicht nur Bilder vs kleine Bilder und mehr text beim ranking
+- vergrößern beim hovern...nur bild?
+- vll kommentar funktion zu den contestants sodass man am ende alle kommentare ansehen kann
+
+::stats page:
+
+- wie viele zweikämpfe gewonnen
+- gegen wen gewonnen bzw verloren...tags (nudeln, reis, rind, huhn)
+
+::meals_overview
+
+- just pics dynamically loaded in on scroll
+- sort button: random, date, rating, ingredients
+
+::random thoughts
+
+- mehrere bilder pro gericht und interne stat zu welches das beste ist

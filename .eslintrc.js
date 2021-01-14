@@ -1,3 +1,5 @@
+const { ESLint } = require("eslint");
+
 module.exports = {
-    "extends": "airbnb-base"
+  extends: "airbnb-base",
 };

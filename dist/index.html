@@ -1,107 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Of Essen</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    
+    <link rel="icon" type="image/png" href="favicon.png" />
+
     <!-- Old Favicon - Grab Icon From Google (Might be unsupported in the future) -->
     <!-- <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=jacinto.design"> -->
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
-    <link rel="stylesheet" href="./css/style.css">
-    
-</head>
-<body class="bg-gradient-to-b from-red-400 to-red-800">
-    
-        <!-- Navbar -->    
-        <!-- Home - Alle Gerichte - Erklärung - Stats -->
-        <div class="container mx-auto bg-red-300 p-2 shadow mb-16">
-            <nav class="flex flex-row md:justify-between font-mono">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-gradient-to-b from-red-400 to-red-800">
+    <!-- Navbar -->
+    <!-- Home - Alle Gerichte - Erklärung - Stats -->
+    <div class="container mx-auto bg-red-300 p-2 shadow mb-16">
+      <nav class="flex flex-row md:justify-between font-mono">
+        <div class="flex flex-row justify-between md:w-auto w-full max-w-0">
+          <a href="#">Logo</a>
 
-                <div class="flex flex-row justify-between md:w-auto w-full">
-                    <a href="#">Logo</a>
-
-                    <p id="btn-hamburger" class="md:hidden"><i class="text-black fas fa-bars"></i></p>
-                </div>
-
-                <ul id="mobileMenu" class="hidden md:flex md:flex-row">
-                    <li class="pr-5"><a href="/overview">Home</a></li>
-                    <li class="pr-5"><a href="/ranklist">Rangliste</a></li>
-                    <li class="pr-5"><a href="/mealpics">Alle Gerichte</a></li>
-                    <li class="pr-5"><a href="/background">Erklärung</a></li>
-                </ul>
-            </nav>
-         </div>
-
-        <!-- header -->
-        <div class="bg-yellow-600 p-10 my-4 mx-20 rounded-full font-mono shadow-lg">
-
-            <h1 class="text-white text-5xl font-bold text-center mb-2">Best of Essen</h1>
-
-            <div>
-                <h2 class="text-grey-200 text-3xl text-center font-medium">
-                    Kampf um das beste Gericht 2020</h2>
-            </div>
+          <p id="btn-hamburger" class="md:hidden">
+            <i class="text-black fas fa-bars"></i>
+          </p>
         </div>
-        
-        <!-- Fight Sektion -->
-        <div class="bg-gradient-to-br from-green-400 to-pink-500 p-4 m-4 mt-10 h-full rounded border-2 border-gray-700">
-            
-            <!-- Fight Schrift mit animation -->
-            <h3 class="text-red-800 text-center font-semibold text-2xl pt-6">
-                FIGHT!</h3>
-            
-            <!-- Gerichte boxen mit vs zeichen
+
+        <ul id="mobileMenu" class="hidden md:flex md:flex-row">
+          <li class="pr-5"><a href="/overview">Home</a></li>
+          <li class="pr-5"><a href="/ranklist">Rangliste</a></li>
+          <li class="pr-5"><a href="/mealpics">Alle Gerichte</a></li>
+          <li class="pr-5"><a href="/info">Info</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- header -->
+    <div class="bg-yellow-600 p-10 my-4 mx-20 rounded-full font-mono shadow-lg">
+      <h1 class="text-white text-5xl font-bold text-center mb-2">
+        Best of Essen
+      </h1>
+
+      <div>
+        <h2 class="text-grey-200 text-3xl text-center font-medium">
+          Kampf um das beste Gericht 2020
+        </h2>
+      </div>
+    </div>
+
+    <!-- Fight Sektion -->
+    <div
+      class="bg-gradient-to-br from-green-400 to-pink-500 p-4 m-4 mt-10 h-full rounded border-2 border-gray-700"
+    >
+      <!-- Fight Schrift mit animation -->
+      <h3 class="text-red-800 text-center font-semibold text-2xl pt-6">
+        FIGHT!
+      </h3>
+
+      <!-- Gerichte boxen mit vs zeichen
             remove opacity after start button -->
-            <div class="mt-16 flex md:flex-row flex-col space-x-4 items-center">
+      <div class="mt-16 flex md:flex-row flex-col space-x-4 items-center">
+        <!-- Box1 -->
+        <div
+          id="gericht1"
+          class="bg-green-400 border-2 border-black shadow-lg ml-6"
+        >
+          <!-- Bild1 -->
+          <img
+            src="./images/placeholder1.jpg"
+            alt=""
+            class="object-fill h-72 w-96 transform hover:scale-120 ease-in-out"
+          />
 
-                <!-- Box1 -->
-                <div id="gericht1" class="bg-green-400 border-2 border-black shadow-lg ml-6">
-                    
-                    <!-- Bild1 -->
-                    <img src="./images/placeholder1.jpg" alt="" class="object-fill h-72 w-96 transform hover:scale-120 ease-in-out ">
-
-                    <!-- Details1 -->
-                    <div class="pt-2">
-                        <h1 class="font-bold">Marrokanische Leber</h1>
-                        <span class="italic">Rinderleber, Paprika, Hirse</span>
-                        
-                    </div>
-                </div>
-
-                <!-- VS Sign -->
-                    <img src="./images/vs.svg" class="flex-grow h-40">
-
-                <!-- Box2 -->
-                <div id="gericht1" class="bg-purple-400 border-2 border-black shadow-lg mr-10">
-
-                    <!-- Bild2 -->
-                    <img src="./images/placeholder2.jpg" alt="" class="object-fill h-72 w-96">
-
-                    <!-- Details2 -->
-                    <div class="pt-2">
-                        <h1 class="font-bold">Marrokanische Leber</h1>
-                        <span class="italic">Rinderleber, Paprika, Hirse</span>
-                        
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Start Button -->
-            <div class="text-center mt-16 mb-5">
-                <button class="transform text-white font-bold bg-gray-500 hover:bg-gray-700 py-2 px-4 rounded hover:translate-y-0 hover:scale-101">
-                    Start</button>    
-            </div>
-            
+          <!-- Details1 -->
+          <div class="pt-2">
+            <h1 class="font-bold">Marrokanische Leber</h1>
+            <span class="italic">Rinderleber, Paprika, Hirse</span>
+          </div>
         </div>
 
-        <div class="h-7"></div>
+        <!-- VS Sign -->
+        <img src="./images/vs.svg" class="flex-grow h-40" />
 
-<!-- Script -->
-<script src="./bundle.js"></script>
-        
-</body>
+        <!-- Box2 -->
+        <div
+          id="gericht1"
+          class="bg-purple-400 border-2 border-black shadow-lg mr-10"
+        >
+          <!-- Bild2 -->
+          <img
+            src="./images/placeholder2.jpg"
+            alt=""
+            class="object-fill h-72 w-96"
+          />
+
+          <!-- Details2 -->
+          <div class="pt-2">
+            <h1 class="font-bold">Marrokanische Leber</h1>
+            <span class="italic">Rinderleber, Paprika, Hirse</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Button -->
+      <div class="text-center mt-16 mb-5">
+        <button
+          class="transform text-white font-bold bg-gray-500 hover:bg-gray-700 py-2 px-4 rounded hover:translate-y-0 hover:scale-101"
+        >
+          Start
+        </button>
+      </div>
+    </div>
+
+    <div class="h-7"></div>
+
+    <!-- Script -->
+    <script src="./bundle.js"></script>
+  </body>
 </html>
