@@ -1,8 +1,8 @@
 [
   {
     "id": 0,
-    "mealName": "Leber",
-    "image": "000.jpg",
+    "mealName": "Marok. Leber mit Hirse",
+    "images": "000-00.jpg",
     "ingredients": ["Rind", "Hirse", "Paprika"],
     "tags": ["Innereien", "Fleisch"],
     "rank": 5,
@@ -12,8 +12,15 @@
   {
     "id": 1,
     "mealName": "Lachs-Nudeln",
-    "image": "001.jpg",
-    "ingredients": ["Lachs", "Nudeln", "Chinakohl", "Pilze", "Möhren", "Kokosmilch"],
+    "image": "001-00.jpg",
+    "ingredients": [
+      "Lachs",
+      "Nudeln",
+      "Chinakohl",
+      "Pilze",
+      "Möhren",
+      "Kokosmilch"
+    ],
     "tags": ["Nudelgericht", "Fisch"],
     "rank": 14,
     "battles": 3,
