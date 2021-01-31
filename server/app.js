@@ -1,17 +1,20 @@
-import fs from 'fs';
 import express from 'express';
 import morgan from 'morgan';
+
 import siteRouter from './data/routes/siteRouter.js';
 
 const app = express();
 
 //! 1) MIDDLEWARE
 
-app.use(morgan("dev"));
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
 app.use(express.json());
+app.use(express.static('../src'));
 
 
-//! 3) Routes
+//! 3) ROUTE Mounting
 
 // Site routes
 app.use("/site", siteRouter);
@@ -24,10 +27,6 @@ app.use("/api/meals", mealRouter);
 app.use("api/users", userRouter)
 
 
-const query = {
-  name: "Leber mit Hirse",
-}
-
 const replaceTemplate = (template, meal) => {
   let output = template.replace(/{%MEALNAME%}/g, meal.name)
   output = template.replace(/{%RANKING%}/g, meal.rank)
@@ -36,4 +35,4 @@ const replaceTemplate = (template, meal) => {
   output = template.replace(/{%%}/g, meal.)
 };
 
-export { app };
+export default app;

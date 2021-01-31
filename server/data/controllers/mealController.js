@@ -2,6 +2,8 @@ const htmlRanklist = fs.readFileSync(`./src/templates/ranklist.html`, 'utf-8');
 
 const htmlRankBox = fs.readFileSync(`./src/templates/rank_box.html`, 'utf-8');
 
+export const checkID = 
+
 export const getRankPage = (req, res) => {
   res.status(500).json({ status: 'error', message: 'Not yet implemented.' });
 };

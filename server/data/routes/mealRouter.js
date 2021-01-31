@@ -1,4 +1,4 @@
-import * as mealController from '../controllers/siteRouteHandler.js';
+import * as mealController from '../controllers/mealController.js';
 
 const router = express.Router();
 
