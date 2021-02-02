@@ -5,9 +5,9 @@
     "images": "000-00.jpg",
     "ingredients": ["Rind", "Hirse", "Paprika"],
     "tags": ["Innereien", "Fleisch"],
-    "rank": 5,
-    "battles": 4,
-    "winrate": 75
+    "rank": 1,
+    "battles": 0,
+    "winrate": 0
   },
   {
     "id": 1,
@@ -22,8 +22,8 @@
       "Kokosmilch"
     ],
     "tags": ["Nudelgericht", "Fisch"],
-    "rank": 14,
-    "battles": 3,
-    "winrate": 33
+    "rank": 2,
+    "battles": 0,
+    "winrate": 0
   }
 ]

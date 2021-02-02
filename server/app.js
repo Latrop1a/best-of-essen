@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 app.use(express.json());
-app.use(express.static('../src'));
+app.use(express.static('././src'));
 
 
 //! 3) ROUTE Mounting
@@ -24,7 +24,7 @@ app.use("/site", siteRouter);
 app.use("/api/meals", mealRouter);
 
 // user routes
-app.use("api/users", userRouter)
+app.use("/api/users", userRouter)
 
 
 const replaceTemplate = (template, meal) => {
@@ -34,5 +34,6 @@ const replaceTemplate = (template, meal) => {
   output = template.replace(/{%%}/g, meal.)
   output = template.replace(/{%%}/g, meal.)
 };
+
 
 export default app;
