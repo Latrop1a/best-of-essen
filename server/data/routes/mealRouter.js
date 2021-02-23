@@ -1,13 +1,13 @@
 import * as mealController from '../controllers/mealController.js';
+import express from 'express';
 
 const router = express.Router();
 
-router.route('/').get(mealController.getAllMeals);
+router
+  .route('/')
+  .get(mealController.getAllMeals)
+  .post(mealController.createMeal);
 
-router.route('/battle').get(mealController.getBattlePage);
-
-router.route('/mealsOverview').get(mealController.getAllMealPage);
-
-router.route('/meal/:id').get(mealController.getMeal);
+router.route('/:?id').get(mealController.getMeal);
 
 export default router;

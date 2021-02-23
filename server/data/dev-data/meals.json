@@ -1,6 +1,6 @@
 [
   {
-    "mealName": "Marok. Leber mit Hirse",
+    "name": "Marok. Leber mit Hirse",
     "description": "Leckere marrokanische Leber mit Hirse und Paprika",
     "images": ["000-00.jpg", "000-01.jpg"],
     "ingredients": ["Rind", "Hirse", "Paprika"],
@@ -8,7 +8,7 @@
     "effort": "low"
   },
   {
-    "mealName": "Lachs-Nudeln",
+    "name": "Lachs-Nudeln",
     "description": "Nudeln mit Lachs und in Kokosmilch getränktem Bratgemüse",
     "images": ["001-00.jpg", "001-01.jpg"],
     "ingredients": [

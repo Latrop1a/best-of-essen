@@ -1,4 +1,5 @@
 import Meal from './../models/mealModel.js';
+import fs from 'fs';
 
 const htmlRanklist = fs.readFileSync(`./src/templates/ranklist.html`, 'utf-8');
 
@@ -6,6 +7,7 @@ const htmlRankBox = fs.readFileSync(`./src/templates/rank_box.html`, 'utf-8');
 
 const meals = 'dummy'; //fill with db query
 
+//? not needed
 export const checkID = (req, res, next) => {
   const id = parseInt(req.params.id);
   const meal = meals.find(el => el.id === id);
@@ -25,7 +27,7 @@ export const getRanklistPage = (req, res) => {
 };
 
 // gets all meals
-export const getAllMealPage = async (req, res) => {
+export const getAllMeals = async (req, res) => {
   try {
     const meals = await Meal.find();
     res.status(200).json({
@@ -63,6 +65,22 @@ export const getMealByRank = async (req, res) => {
     res.status(200).json({
       status: 'success',
       message: meal,
+    });
+  } catch (error) {
+    res.status(404).json({
+      status: 'fail',
+      message: error,
+    });
+  }
+};
+
+export const createMeal = async (req, res) => {
+  try {
+    const meal = req.body;
+    Meal.create(meal);
+    res.status(200).json({
+      status: 'success',
+      data: meal,
     });
   } catch (error) {
     res.status(404).json({

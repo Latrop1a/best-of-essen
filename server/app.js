@@ -3,6 +3,7 @@ import morgan from 'morgan';
 
 import siteRouter from './data/routes/siteRouter.js';
 import mealRouter from './data/routes/mealRouter.js';
+import userRouter from './data/routes/userRouter.js';
 
 const app = express();
 
