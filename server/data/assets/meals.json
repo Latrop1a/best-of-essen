@@ -1,18 +1,16 @@
 [
   {
-    "id": 0,
     "mealName": "Marok. Leber mit Hirse",
-    "images": "000-00.jpg",
+    "description": "Leckere marrokanische Leber mit Hirse und Paprika",
+    "images": ["000-00.jpg", "000-01.jpg"],
     "ingredients": ["Rind", "Hirse", "Paprika"],
-    "tags": ["Innereien", "Fleisch"],
-    "rank": 1,
-    "battles": 0,
-    "winrate": 0
+    "tags": ["Innereien", "Fleisch", "Pseudogetreide"],
+    "effort": "low"
   },
   {
-    "id": 1,
     "mealName": "Lachs-Nudeln",
-    "image": "001-00.jpg",
+    "description": "Nudeln mit Lachs und in Kokosmilch getränktem Bratgemüse",
+    "images": ["001-00.jpg", "001-01.jpg"],
     "ingredients": [
       "Lachs",
       "Nudeln",
@@ -21,9 +19,7 @@
       "Möhren",
       "Kokosmilch"
     ],
-    "tags": ["Nudelgericht", "Fisch"],
-    "rank": 2,
-    "battles": 0,
-    "winrate": 0
+    "tags": ["Nudeln", "Fisch", "Kokosmilch"],
+    "effort": "med"
   }
 ]
