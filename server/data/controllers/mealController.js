@@ -18,10 +18,12 @@ export const checkID = (req, res, next) => {
   next();
 };
 
+//TODO
 export const getRankPage = (req, res) => {
   res.status(500).json({ status: 'error', message: 'Not yet implemented.' });
 };
 
+//TODO
 export const getRanklistPage = (req, res) => {
   res.status(500).json({ status: 'error', message: 'Not yet implemented.' });
 };
@@ -42,7 +44,7 @@ export const getAllMeals = async (req, res) => {
   }
 };
 
-//gets a specific meal by id
+// gets a specific meal by id
 export const getMeal = async (req, res) => {
   try {
     const meal = await Meal.findById(req.params.id);
@@ -74,10 +76,29 @@ export const getMealByRank = async (req, res) => {
   }
 };
 
+// Creating a new MEAL
 export const createMeal = async (req, res) => {
   try {
     const meal = req.body;
     Meal.create(meal);
+    res.status(200).json({
+      status: 'success',
+      data: meal,
+    });
+  } catch (error) {
+    res.status(404).json({
+      status: 'fail',
+      message: error,
+    });
+  }
+};
+
+// Patching a MEAL by ID
+export const patchMeal = async (req, res) => {
+  try {
+    const meal = await Meal.findById(req.params.id);
+    const newMeal = req.body;
+
     res.status(200).json({
       status: 'success',
       data: meal,

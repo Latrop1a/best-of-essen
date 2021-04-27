@@ -1,4 +1,5 @@
 // Script to crudely deal with database data
+// execute with option --import to import all data from meals.json
 
 import mongoose from 'mongoose';
 import { dirname } from 'path'; // to use __dirname
@@ -35,8 +36,8 @@ const importDevData = async () => {
   }
 };
 
-// DELETE ALL DATA FROM FeatureCollection
-const deleteAllData = async () => {
+// DELETE ALL DATA FROM db document
+const deleteAllData = async Document => {
   try {
     await Meal.deleteMany();
     console.log('Data deleted');
@@ -49,7 +50,7 @@ const deleteAllData = async () => {
 // command line interface for using with --options
 if (process.argv[2] === '--import') {
   importDevData();
-} else if (process.argv[2] === '--delete') {
+} else if (process.argv[2].includes('--deleteAll')) {
   deleteAllData();
 } else {
   console.log('no options specified');
