@@ -96,9 +96,16 @@ export const createMeal = async (req, res) => {
 // Patching a MEAL by ID
 export const patchMeal = async (req, res) => {
   try {
-    const meal = await Meal.findById(req.params.id);
+    //find meal using id from url
+    //new meal info from body
+    const mealId = req.params.id;
     const newMeal = req.body;
+    //find and update meal, {new} to return updated meal
+    const meal = await Meal.findByIdAndUpdate(mealId, newMeal, {
+      new: true,
+    });
 
+    //give back status with updated meal as message
     res.status(200).json({
       status: 'success',
       data: meal,
