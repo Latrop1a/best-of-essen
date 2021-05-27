@@ -4,8 +4,8 @@ import * as eloCtrl from '../controllers/eloController';
 
 // updates after battle
 //get meal object from saved state/dom
-const updateElo = (m1, m2) => {
-  eloArr = eloCtrl.calcElo(m1, m2, m1Victory);
+const updateElo = (winnerMeal, loserMeal) => {
+  eloArr = eloCtrl.calcElo(winnerMeal, loserMeal, m1Victory);
   elo1 = eloArr[0];
   elo2 = eloArr[1];
 
@@ -13,3 +13,5 @@ const updateElo = (m1, m2) => {
 
   //reCalc ranks db
 };
+
+const updateView = () => {};
