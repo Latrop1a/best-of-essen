@@ -15,3 +15,10 @@ const updateElo = (winnerMeal, loserMeal) => {
 };
 
 const updateView = () => {};
+
+//getting 2 meals out of the Database
+//todo might make it more probable to get meals with low fight count
+
+const get2RndMeals = () => {
+  return;
+};

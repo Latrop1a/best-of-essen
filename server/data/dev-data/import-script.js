@@ -22,6 +22,7 @@ mongoose
   .then(con => console.log('DB connection successful!'))
   .catch(err => console.log(err));
 
+// get meal data from file
 let meals = fs.readFileSync(`${__dirname}/meals.json`);
 meals = JSON.parse(meals);
 

@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
 import './loadEnv.js'; //makes dotEnv work with ES6 imports
+import mongoose from 'mongoose';
 import app from './app.js';
 
 //* Database
@@ -7,7 +7,7 @@ import app from './app.js';
 const DB = process.env.DATABASE;
 console.log(DB);
 
-// Connecting to db
+// Connecting to mongo db
 mongoose
   .connect(DB, {
     useNewUrlParser: true,
@@ -16,7 +16,7 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(con => console.log('DB connection successfull!'))
-  .catch(err => console.log(err));
+  .catch(err => console.log('DB connect failure\n', err));
 
 //* Server Start
 const port = process.env.PORT || 4000;

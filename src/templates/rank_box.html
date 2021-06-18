@@ -11,7 +11,7 @@
     <img
       class="w-80 h-full min-w-max object-cover rounded-2xl py-1 pl-1"
       alt="Meal Picture"
-      src="./pictures/meals/{%MEAL-ID%}.jpg"
+      src="./pictures/meals/{%MEAL-PIC%}.jpg"
     />
 
     <!-- Textbox -->
@@ -29,20 +29,59 @@
       <!-- TAGS only on desktop-->
 
       <div
-        class="flex flex-wrap mt-1 pt-1 -ml-1 font-semibold text-xs hidden sm:block"
+        class="
+          flex flex-wrap
+          mt-1
+          pt-1
+          -ml-1
+          font-semibold
+          text-xs
+          hidden
+          sm:block
+        "
       >
         {%TAGS%}
         <a
           href="/tags?={%TAG%}"
-          class="m-1 bg-green-200 hover:bg-green-600 rounded-full px-2 leading-loose cursor-pointer scale-90 transform"
+          class="
+            m-1
+            bg-green-200
+            hover:bg-green-600
+            rounded-full
+            px-2
+            leading-loose
+            cursor-pointer
+            scale-90
+            transform
+          "
           >{%TAGS%}</a
         >
         <a
-          class="m-1 bg-green-200 hover:bg-green-600 rounded-full px-2 leading-loose cursor-pointer scale-90 transform"
+          class="
+            m-1
+            bg-green-200
+            hover:bg-green-600
+            rounded-full
+            px-2
+            leading-loose
+            cursor-pointer
+            scale-90
+            transform
+          "
           >#stark</a
         >
         <a
-          class="m-1 bg-green-200 hover:bg-green-600 rounded-full px-2 leading-loose cursor-pointer scale-90 transform"
+          class="
+            m-1
+            bg-green-200
+            hover:bg-green-600
+            rounded-full
+            px-2
+            leading-loose
+            cursor-pointer
+            scale-90
+            transform
+          "
           >#gameo</a
         >
       </div>

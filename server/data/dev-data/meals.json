@@ -2,7 +2,7 @@
   {
     "name": "Marok. Leber mit Hirse",
     "description": "Leckere marrokanische Leber mit Hirse und Paprika",
-    "images": ["000-00.jpg", "000-01.jpg"],
+    "img": ["000-00.jpg", "000-01.jpg"],
     "ingredients": ["Rind", "Hirse", "Paprika"],
     "tags": ["Innereien", "Fleisch", "Pseudogetreide"],
     "effort": "low"
@@ -10,7 +10,7 @@
   {
     "name": "Lachs-Nudeln",
     "description": "Nudeln mit Lachs und in Kokosmilch getränktem Bratgemüse",
-    "images": ["001-00.jpg", "001-01.jpg"],
+    "img": ["001-00.jpg", "001-01.jpg"],
     "ingredients": [
       "Lachs",
       "Nudeln",
@@ -19,7 +19,45 @@
       "Möhren",
       "Kokosmilch"
     ],
-    "tags": ["Nudeln", "Fisch", "Kokosmilch"],
+    "tags": ["Nudeln", "Fisch", "Sahne/Kokos"],
+    "effort": "low"
+  },
+  {
+    "name": "Rinderbrühe",
+    "description": "Suppenfleisch mit Gemüse",
+    "img": ["002-00.jpg"],
+    "ingredients": ["Rind", "Möhren", "Pilze", "Möhren", "Chinakohl"],
+    "tags": ["Suppe", "Fleischgericht"],
+    "effort": "med"
+  },
+  {
+    "name": "Kalbsbratwurst mit Nudeln",
+    "description": "Kalbsbratwurst in Pfanne gebraten mit Gemüse auf Nudeln serviert",
+    "img": ["003-00.jpg"],
+    "ingredients": [
+      "Lachs",
+      "Nudeln",
+      "Chinakohl",
+      "Pilze",
+      "Möhren",
+      "Kokosmilch"
+    ],
+    "tags": ["Fleischgericht", "Nudelgericht"],
+    "effort": "med"
+  },
+  {
+    "name": "Kalbsbratwurst mit Reis",
+    "description": "Kalbsbratwurst in Pfanne gebraten mit Gemüse auf Reis serviert",
+    "img": ["003-00.jpg"],
+    "ingredients": [
+      "Lachs",
+      "Nudeln",
+      "Chinakohl",
+      "Pilze",
+      "Möhren",
+      "Kokosmilch"
+    ],
+    "tags": ["Nudelgericht", "Fisch", "Sahne/Kokos"],
     "effort": "med"
   }
 ]

@@ -5,16 +5,21 @@ const mealSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Need a meal name'],
     unique: true,
+    trim: true,
   },
   description: {
     type: String,
     required: [true, 'Need a meal description'],
+    trim: true,
   },
   images: {
     type: [String],
     required: [true, 'Need a meal pic'],
   },
-  ingredients: [String],
+  ingredients: {
+    type: [String],
+    required: [true, 'Need some ingredients'],
+  },
   tags: [String],
   effort: {
     type: String,

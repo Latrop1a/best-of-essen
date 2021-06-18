@@ -1,11 +1,15 @@
 import mongoose from 'mongoose';
 
 const rankSchema = new mongoose.Schema({
+  mealID: {
+    type: Number,
+    required: true,
+  },
   rank: {
     type: Number,
     default: 0,
   },
-  elo: {
+  rating: {
     type: Number,
     default: 1000,
   },
@@ -19,6 +23,10 @@ const rankSchema = new mongoose.Schema({
   },
   updatedAt: {
     type: Date,
+  },
+  createdAt: {
+    type: Date,
+    default: new Date(),
   },
 });
 
