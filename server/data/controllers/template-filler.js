@@ -1,4 +1,5 @@
 import fs from 'fs';
+import Meal from './../models/mealModel.js'
 
 //----------------------------------------------------------------
 // todo: 1) get all templates replaced
@@ -38,7 +39,13 @@ export const rankList = meal => {
 const createRankingBoxes = (numOfMeal, page) => {
   let output;
 
+  //1: get mealArr sorted by rank and correct page
+  //todo get sorted by rank and depending on pagenubmer
+  mealArr = Meal.find();
+
+  //2: insert numOf Meals html
   for (let i = 0; i <= numOfMeal; i++) {
+    output.replace(rankBox())
     
   }
 
@@ -61,13 +68,24 @@ const rankBox = meal => {
   return output;
 };
 
+// used in rankBox replace to create the tags html
+// creates html from meal tags array ..displaying 3
+const tagBox = mealTagsArr => {
+  let output = html.tagBox;
+
+  let tagsArr = getXRndEles(mealTagsArr, 3);
+
+  //replaces all 3 tags
+  for (let i = 0; i < 3; i++) {
+
+    output.replace(/{%TAG-NAME%}/g, tagsArr[0]);
+  }
+
+};
+
 // small fnc to chose rnd arr ele
 const getRndEle = arr => {
   return arr[Math.floor(Math.random * arr.length)];
-};
-
-const tagBox = mealTags => {
-  let output = html.tagBox;
 };
 
 // functions returns arr with x random eles from input arr
