@@ -1,10 +1,6 @@
 import Meal from './../models/mealModel.js';
 import fs from 'fs';
 
-const htmlRanklist = fs.readFileSync(`../src/templates/ranklist.html`, 'utf-8');
-
-const htmlRankBox = fs.readFileSync(`../src/templates/rank_box.html`, 'utf-8');
-
 const meals = 'dummy'; //fill with db query
 
 //? not needed

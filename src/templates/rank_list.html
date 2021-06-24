@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ranking</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="favicon.png" />
 
     <!-- Old Favicon - Grab Icon From Google (Might be unsupported in the future) -->
@@ -52,7 +56,9 @@
 
     <!-- Ranking Boxes Section -->
 
-    <div class="container h-screen flex items-center">{%MEAL-RANKINGS%}</div>
+    <div class="h-screen flex-col items-center m-auto mx-20">
+      {%MEAL-RANKINGS%}
+    </div>
 
     <!-- Script -->
     <script src="./bundle.js"></script>

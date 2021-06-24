@@ -3,9 +3,9 @@ import express from 'express';
 
 const router = express.Router();
 
-router.route('/ranks/:page?').get(siteController.getRankPage);
+router.route('/ranks/:page').get(siteController.getRanklistPage);
 router.route('/battle').get(siteController.getBattlePage);
 router.route('/mealsOverview').get(siteController.getAllMealPage);
-router.route('/meal/:id').get(siteController.getMeal);
+//router.route('/meal/:id').get(siteController.getMeal);
 
 export default router;
