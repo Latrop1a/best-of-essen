@@ -12,9 +12,13 @@ const mealSchema = new mongoose.Schema({
     required: [true, 'Need a meal description'],
     trim: true,
   },
+  ident: {
+    type: Number,
+    required: [true, 'Need an id']
+  },
   images: {
-    type: [String],
-    required: [true, 'Need a meal pic'],
+    type: Number,
+    required: [true, 'Need a number of meal pics'],
   },
   ingredients: {
     type: [String],

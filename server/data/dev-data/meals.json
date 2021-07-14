@@ -2,7 +2,8 @@
   {
     "name": "Marok. Leber mit Hirse",
     "description": "Leckere marrokanische Leber mit Hirse und Paprika",
-    "img": ["000-00.jpg", "000-01.jpg"],
+    "ident": "000",
+    "images": 1,
     "ingredients": ["Rind", "Hirse", "Paprika"],
     "tags": ["Innereien", "Fleisch", "Pseudogetreide"],
     "effort": "low"
@@ -10,7 +11,8 @@
   {
     "name": "Lachs-Nudeln",
     "description": "Nudeln mit Lachs und in Kokosmilch getränktem Bratgemüse",
-    "img": ["001-00.jpg", "001-01.jpg"],
+    "ident": "001",
+    "images": 1,
     "ingredients": [
       "Lachs",
       "Nudeln",
@@ -25,7 +27,8 @@
   {
     "name": "Rinderbrühe",
     "description": "Suppenfleisch mit Gemüse",
-    "img": ["002-00.jpg"],
+    "ident": "002",
+    "images": 1,
     "ingredients": ["Rind", "Möhren", "Pilze", "Möhren", "Chinakohl"],
     "tags": ["Suppe", "Fleischgericht"],
     "effort": "med"
@@ -33,7 +36,8 @@
   {
     "name": "Kalbsbratwurst mit Nudeln",
     "description": "Kalbsbratwurst in Pfanne gebraten mit Gemüse auf Nudeln serviert",
-    "img": ["003-00.jpg"],
+    "ident": "003",
+    "images": 1,
     "ingredients": [
       "Lachs",
       "Nudeln",
@@ -48,7 +52,40 @@
   {
     "name": "Kalbsbratwurst mit Reis",
     "description": "Kalbsbratwurst in Pfanne gebraten mit Gemüse auf Reis serviert",
-    "img": ["003-00.jpg"],
+    "ident": "004",
+    "images": 1,
+    "ingredients": [
+      "Lachs",
+      "Nudeln",
+      "Chinakohl",
+      "Pilze",
+      "Möhren",
+      "Kokosmilch"
+    ],
+    "tags": ["Nudelgericht", "Fisch", "Sahne/Kokos"],
+    "effort": "med"
+  },
+  {
+    "name": "Kürbissuppe",
+    "description": "Kürbissuppe mit Sahne und verschiedenen extra Zutaten",
+    "ident": "005",
+    "images": 1,
+    "ingredients": [
+      "Lachs",
+      "Nudeln",
+      "Chinakohl",
+      "Pilze",
+      "Möhren",
+      "Kokosmilch"
+    ],
+    "tags": ["Nudelgericht", "Fisch", "Sahne/Kokos"],
+    "effort": "med"
+  },
+  {
+    "name": "HähnchenNudeln",
+    "description": "Kalbsbratwurst in Pfanne gebraten mit Gemüse auf Reis serviert",
+    "ident": "006",
+    "images": 5,
     "ingredients": [
       "Lachs",
       "Nudeln",

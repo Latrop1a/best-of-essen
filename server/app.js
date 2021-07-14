@@ -25,15 +25,7 @@ app.use('/site', siteRouter);
 app.use('/api/meals', mealRouter);
 
 // user routes
+// not implemented
 app.use('/api/users', userRouter);
-
-//temp
-/* const replaceTemplate = (template, meal) => {
-  let output = template.replace(/{%MEALNAME%}/g, meal.name)
-  output = template.replace(/{%RANKING%}/g, meal.rank)
-  output = template.replace(/{%%}/g, meal.)
-  output = template.replace(/{%%}/g, meal.)
-  output = template.replace(/{%%}/g, meal.)
-}; */
 
 export default app;

@@ -8,9 +8,9 @@ import Meal from './../models/mealModel.js';
 
 // object with all templates read from file system
 const html = {
-  rankList: fs.readFileSync(`./../src/templates/rank_list.html`, 'utf-8'),
-  rankBox: fs.readFileSync(`./../src/templates/rank_box.html`, 'utf-8'),
-  tagBox: fs.readFileSync(`./../src/templates/tag_box.html`, 'utf-8'),
+  rankList: fs.readFileSync(`./data/assets/templates/rank_list.html`, 'utf-8'),
+  rankBox: fs.readFileSync(`./data/assets/templates/rank_box.html`, 'utf-8'),
+  tagBox: fs.readFileSync(`./data/assets/templates/tag_box.html`, 'utf-8'),
   //battle: fs.readFileSync(`./../src/templates/battle.html`, 'utf-8'),
   //mealPage: fs.readFileSync(`./../src/templates/meal.html`, 'utf-8'),
   //mealList: fs.readFileSync(`./../src/templates/meal_list.html`, 'utf-8'),
@@ -26,7 +26,7 @@ export const rankList = async page => {
 
   // insert meals into the html depending on pagenumber
   try {
-    const htmlAdd = await createRankingBoxes(2, page);
+    const htmlAdd = await createRankingBoxes(7, page);
     output = output.replace(/{%MEAL-RANKINGS%}/g, htmlAdd);
 
     return output;
@@ -65,7 +65,7 @@ const rankBox = meal => {
 
   //replace place holders with meal data
   //chose rnd image
-  output = output.replace(/{%MEAL-PIC%}/g, getRndEle(meal.images));
+  output = output.replace(/{%MEAL-PIC%}/g, getImgStr(meal.images, meal.ident));
   output = output.replace(/{%MEALNAME%}/g, meal.name);
   output = output.replace(/{%RANKING%}/g, meal.rank);
   output = output.replace(/{%TAGS%}/g, tagBox(meal.tags));
@@ -92,6 +92,28 @@ const tagBox = mealTagsArr => {
 const getRndEle = arr => {
   let rndEle = Math.floor(Math.random() * arr.length);
   return arr[rndEle];
+};
+
+//helper fnc to construct img string for replacement
+const getImgStr = (numImg, mealIdent) => {
+  console.log(numImg);
+  let numStr = '' + Math.round(Math.random() * numImg);
+  let idStr = '' + mealIdent;
+  if (mealIdent < 10) {
+    idStr = '00' + mealIdent;
+  } else if (mealIdent < 100) {
+    idStr = '0' + mealIdent;
+  }
+  if (numImg < 10) {
+    numStr = '0' + numStr;
+  }
+
+  return idStr + '-' + numStr;
+};
+
+// helper fnc to chose rnd int from 0 to limit
+const getRndNum = numLimit => {
+  return Math.round(Math.random * numLimit);
 };
 
 // helper func returns arr with (num) random eles from input arr
