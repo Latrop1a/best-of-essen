@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meal Details</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Old Favicon - Grab Icon From Google (Might be unsupported in the future) -->
+    <!-- <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=jacinto.design"> -->
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-gradient-to-b from-red-400 to-red-800">
+    <!-- Navbar -->
+    <!-- Home - Alle Gerichte - Erklärung - Stats -->
+    <div class="container mx-auto bg-red-300 p-2 shadow mb-16">
+      <nav class="flex flex-row md:justify-between">
+        <div class="flex flex-row justify-between md:w-auto w-full">
+          <a href="#">Logo</a>
+
+          <p id="btn-hamburger" class="md:hidden">
+            <i class="text-black fas fa-bars"></i>
+          </p>
+        </div>
+
+        <ul id="mobileMenu" class="hidden md:flex md:flex-row">
+          <li class="pr-5"><a>Home</a></li>
+          <li class="pr-5"><a>Alle Gerichte</a></li>
+          <li class="pr-5"><a>Rangliste</a></li>
+          <li class="pr-5"><a>Erklärung</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- header -->
+    <div class="bg-yellow-600 p-10 my-4 mx-20 rounded-full font-mono shadow-lg">
+      <h1 class="text-white text-5xl font-bold text-center mb-2">
+        Best of Essen
+      </h1>
+
+      <div>
+        <h2 class="text-grey-200 text-3xl text-center font-medium">
+          Ranking aller Gerichte
+        </h2>
+      </div>
+    </div>
+
+    <!-- Meal Details Section -->
+
+    <div class="h-screen flex-col items-center m-auto mx-20">
+      {%MEAL-DETAILSS%}
+    </div>
+
+    <!-- Similar Meals Section -->
+
+    <!-- Script -->
+    <script src="./bundle.js"></script>
+  </body>
+</html>

@@ -7,11 +7,39 @@ export const getRankPage = (req, res) => {
   res.status(500).json({ status: 'error', message: 'Not yet implemented.' });
 };
 
-// creates rankList HTML based on pagenumber of request id
+/**
+ * creates rankList HTML based on pagenumber of request id
+ * @param {*} req contains page number for pagination of list
+ * @param {*} res response send to client
+ */
 export const getRanklistPage = async (req, res) => {
   try {
     const page = req.params.page;
     const html = await templateFiller.rankList(page);
+    /* res.status(200).json({
+      status: 'success',
+      data: { html },
+      send: html,
+    }); */
+    res.send(html);
+  } catch (error) {
+    console.log(error);
+    res.status(404).json({
+      status: 'fail',
+      message: error,
+    });
+  }
+};
+
+/**
+ * creates rankList HTML based on pagenumber of request id
+ * @param {*} req contains mealID
+ * @param {*} res response send to client
+ */
+export const getMealPage = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const html = await templateFiller.mealPage(id);
     /* res.status(200).json({
       status: 'success',
       data: { html },
@@ -36,19 +64,6 @@ export const getBattlePage = (req, res) => {
   // standard battle page
 
   // get meals for first battle
-
-  res.status(500).json({ status: 'error', message: 'Not yet implemented.' });
-};
-
-//meal detail page
-export const getMealPage = (req, res) => {
-  let meal;
-  // get meal data
-  meal = Meal.findById(req.params.id);
-
-  // modify placeholders with meal
-
-  // serve
 
   res.status(500).json({ status: 'error', message: 'Not yet implemented.' });
 };

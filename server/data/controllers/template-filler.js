@@ -1,5 +1,8 @@
 import fs from 'fs';
 import Meal from './../models/mealModel.js';
+import * as helper from './tempFills/tempFillHelper.js';
+import createRankingBoxes from './tempFills/tempRankList.js';
+import createMealDetails from './tempFills/templDetailsPage.js';
 
 //----------------------------------------------------------------
 // todo: 1) get all templates replaced
@@ -7,17 +10,21 @@ import Meal from './../models/mealModel.js';
 // todo: 3) rearrange html data somewhere else?
 
 // object with all templates read from file system
-const html = {
+export const html = {
   rankList: fs.readFileSync(`./data/assets/templates/rank_list.html`, 'utf-8'),
   rankBox: fs.readFileSync(`./data/assets/templates/rank_box.html`, 'utf-8'),
   tagBox: fs.readFileSync(`./data/assets/templates/tag_box.html`, 'utf-8'),
-  //battle: fs.readFileSync(`./../src/templates/battle.html`, 'utf-8'),
-  //mealPage: fs.readFileSync(`./../src/templates/meal.html`, 'utf-8'),
+  battlePage: fs.readFileSync(
+    `./data/assets/templates/battle_page.html`,
+    'utf-8'
+  ),
+  mealPage: fs.readFileSync(`./data/assets/templates/meal_page.html`, 'utf-8'),
+  mealBox: fs.readFileSync(`./data/assets/templates/meal_box.html`, 'utf-8'),
   //mealList: fs.readFileSync(`./../src/templates/meal_list.html`, 'utf-8'),
 };
 
 /**
- * RankList main function
+ * RankList main function creating html
  * @param {*} page page-number per route id
  * @returns full page html
  */
@@ -26,7 +33,7 @@ export const rankList = async page => {
 
   // insert meals into the html depending on pagenumber
   try {
-    const htmlAdd = await createRankingBoxes(7, page);
+    const htmlAdd = await createRankingBoxes(7, page, html);
     output = output.replace(/{%MEAL-RANKINGS%}/g, htmlAdd);
 
     return output;
@@ -36,93 +43,40 @@ export const rankList = async page => {
 };
 
 /**
- * Creates html with several rankboxes used in rankList Html
- * @param {*} numOfMeal how many meals displayed per page
- * @param {*} page page-number so the right meals are displayed
- * @returns string html to be used in ranklist
+ * mealPage main function creating html
+ * @param {*} mealId id of meal to look up details
+ * @returns full page html
  */
-const createRankingBoxes = async (numOfMeal, page) => {
-  let output = '';
 
-  //1: get mealArr sorted by rank and correct page
-  //todo get sorted by rank and depending on pagenubmer
+export const mealPage = async mealId => {
+  let output = html.mealPage;
+
+  // insert meal details into html
   try {
-    const mealArr = await Meal.find();
-    //2: insert numOf Meals html
-    for (let i = 0; i < numOfMeal; i++) {
-      output = output + rankBox(mealArr[i]);
-    }
+    const htmlAdd = await createMealDetails(mealId);
+    output = output.replace(/{%MEAL-DETAILS%}/g, htmlAdd);
+
     return output;
   } catch (e) {
     console.log(e);
   }
 };
 
-// replaces one rankBox with meal data
-const rankBox = meal => {
-  //get html template for rankBox
-  let output = html.rankBox;
+/**
+ * mealPage main function creating html
+ *
+ * @returns full page html
+ */
+export const battlePage = async () => {
+  let output = html.battlePage;
 
-  //replace place holders with meal data
-  //chose rnd image
-  output = output.replace(/{%MEAL-PIC%}/g, getImgStr(meal.images, meal.ident));
-  output = output.replace(/{%MEALNAME%}/g, meal.name);
-  output = output.replace(/{%RANKING%}/g, meal.rank);
-  output = output.replace(/{%TAGS%}/g, tagBox(meal.tags));
+  // insert meal details into html
+  try {
+    const htmlAdd = await createBattlePage();
+    output = output.replace(/{%BATTLE%}/g, htmlAdd);
 
-  return output;
-};
-
-// used in rankBox replace to create the tags html
-// creates html from meal tags array ..displaying 3
-const tagBox = mealTagsArr => {
-  let output = html.tagBox;
-
-  let tagsArr = getXRndEles(mealTagsArr, 3);
-
-  //replaces all 3 tags
-  for (let i = 0; i < 3; i++) {
-    output = output.replace(/{%TAG%}/, tagsArr[i]);
-    output = output.replace(/{%TAG-NAME%}/, tagsArr[i]);
+    return output;
+  } catch (e) {
+    console.log(e);
   }
-  return output;
-};
-
-// helper fnc to chose rnd arr ele
-const getRndEle = arr => {
-  let rndEle = Math.floor(Math.random() * arr.length);
-  return arr[rndEle];
-};
-
-//helper fnc to construct img string for replacement
-const getImgStr = (numImg, mealIdent) => {
-  console.log(numImg);
-  let numStr = '' + Math.round(Math.random() * numImg);
-  let idStr = '' + mealIdent;
-  if (mealIdent < 10) {
-    idStr = '00' + mealIdent;
-  } else if (mealIdent < 100) {
-    idStr = '0' + mealIdent;
-  }
-  if (numImg < 10) {
-    numStr = '0' + numStr;
-  }
-
-  return idStr + '-' + numStr;
-};
-
-// helper fnc to chose rnd int from 0 to limit
-const getRndNum = numLimit => {
-  return Math.round(Math.random * numLimit);
-};
-
-// helper func returns arr with (num) random eles from input arr
-const getXRndEles = (arr, num) => {
-  let retArr = [];
-  for (let i = 0; i < num; i++) {
-    let ele = getRndEle(arr);
-    arr.splice(arr.indexOf(ele), 1);
-    retArr.push(ele);
-  }
-  return retArr;
 };
