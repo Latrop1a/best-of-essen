@@ -1,29 +1,21 @@
 Best of Essen
 
-Dynamic server-side rendered page about determining our best corona meals.
+Dynamic server-side rendered page about epically finding our best corona meals.
 Ranking list, stats page, meal page etc
 
-Webpack to bundle
-tailwindcss to custom style css right in the html
-mongoDB for data
-node.js for server
+- Webpack to bundle
+- tailwindcss to custom style css right in the html
+- mongoDB for data w/ mongoose framework
+- node.js for server w/ express framework
+- rest api
 
 Todo:
 ::fight page
 
-- vergrößern beim hovern...nur bild?
-- vll kommentar funktion zu den contestants sodass man am ende alle kommentare ansehen kann
-
-::stats page:
-
-- wie viele zweikämpfe gewonnen
-- gegen wen gewonnen bzw verloren...tags (nudeln, reis, rind, huhn)
+- increase size on hover..just picture?
+- maybe
 
 ::meals_overview
 
 - just pics dynamically loaded in on scroll
 - sort button: random, date, rating, ingredients
-
-::random thoughts
-
-- mehrere bilder pro gericht und interne stat zu welches das beste ist
